@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <style>
+    :root{
+      --project-color:green;
+    }
+    .red-text {
+      
+      color: rgba(255, 0, 0, 0.534);
+    }
+    main {
+      --red-text-brown: #ff2ee6;
+    }
+    .main-para{
+      color: var(--red-text-brown);
+    }
+    h2 {
+      font-family: Lobster, monospace;
+      color:var(--project-color);
+    }
+
+    p {
+      font-size: 16px;
+      font-family: monospace;
+    }
+
+    .thick-green-border {
+      border-color: green;
+      border-width: 10px;
+      border-style: solid;
+      border-radius: 50%;
+    }
+
+    .smaller-image {
+      width: 100px;
+    }
+
+    .silver-background {
+      background-color: silver;
+      
+    }
+    .profile-img{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border-color: #770e0e;
+      border-width: 0.5em;
+      border-style: ridge;
+      margin-left: 4em;
+    }
+
+    [type='checkbox']{
+      margin: 10px 0px 15px 0px;
+    }
+    [type='img']{
+      padding: 140em;
+    }
+
+    @media (max-width: 400px){
+      body{
+        background-color: yellow;;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <h2 class="red-text">CatPhotoApp</h2>
+  <main>
+    <p class="main-para">Click here to view more <a href="#">cat photos</a>.</p>
+
+    <a href="#">
+      <img class="smaller-image thick-green-border" 
+      src="https://bit.ly/fcc-relaxing-cat"
+      alt="A cute orange cat lying on its back.">
+    </a>
+    <a href="#cat-photo-form" >
+      <img src="eBayo.JPG" alt="eBayo" class="profile-img">
+    </a>
+    <div class="silver-background">
+      <p>Things cats love:</p>
+      <ul>
+        <li>cat nip</li>
+        <li>laser pointers</li>
+        <li>lasagna</li>
+      </ul>
+      <p>Top 3 things cats hate:</p>
+      <ol>
+        <li>flea treatment</li>
+        <li>thunder</li>
+        <li>other cats</li>
+      </ol>
+    </div>
+
+    <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
+      <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+      <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+      <label><input type="checkbox" name="personality" checked> Loving</label>
+      <label><input type="checkbox" name="personality"> Lazy</label>
+      <label><input type="checkbox" name="personality"> Energetic</label><br>
+      <input type="text" placeholder="cat photo URL" required>
+      <button type="submit">Submit</button>
+    </form>
+   
+  </main>
+  <h2>Designed by eBayo</h2>
+</body>
+</html>
