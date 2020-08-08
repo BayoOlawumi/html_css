@@ -16,15 +16,19 @@
     }
     main {
       --red-text-brown: #ff2ee6;
+      position: relative;
+      bottom: 50px;
     }
     .main-para{
       color: var(--red-text-brown);
     }
     h2 {
       font-family: Lobster, monospace;
+     
+    }
+    h3{
       color:var(--project-color);
     }
-
     p {
       font-size: 16px;
       font-family: monospace;
@@ -45,6 +49,27 @@
       background-color: silver;
       
     }
+    .card-like{
+      width: 140px;
+      height: 160px;
+      box-shadow: 0 20px 20px rgba(0,0,0,0.19), 0 26px 6px rgba(0,0,0,0.23);
+      background-color: rgba(255, 0, 0, 0.534);
+      
+    }
+    .card-like:hover{
+      animation-name: linear-grad;
+      animation-duration: 4s;
+      animation-iteration-count: 3;
+      animation-timing-function:ease-out;
+    }
+    @keyframes linear-grad {
+      0%{
+        background-color: linear-gradient(90deg, red,yellow,blue);
+      }
+      50%{
+        background-color: repeating-linear-gradient(90deg, red 2px,yellow 10px,blue 40px);
+      }
+    }
     .profile-img{
       width: 150px;
       height: 150px;
@@ -54,7 +79,36 @@
       border-style: ridge;
       margin-left: 4em;
     }
+    .footer{
+      font-size: 15px;
+    }
+    #copyright{
+      position: fixed;
+      bottom: 1rem;
+      font-weight: bold;
+      display:inline-block;
+      text-align: center;
+      width: 100%;
+    }
 
+    #copyright:hover{
+      animation-name: blinking;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 3;
+      animation-timing-function:ease-out;
+    }
+    @keyframes blinking{
+      0%{
+        color:#FF7F00;
+      }
+     
+      100%{
+        color:rgba(255, 0, 0, 0.9);
+        font-size: 1.1em;
+      }
+    }
+   
     [type='checkbox']{
       margin: 10px 0px 15px 0px;
     }
@@ -97,6 +151,9 @@
         <li>other cats</li>
       </ol>
     </div>
+    <div class="card-like">
+
+    </div>
 
     <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
       <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
@@ -109,6 +166,11 @@
     </form>
    
   </main>
-  <h2>Designed by eBayo</h2>
+  <div class="footer">
+    <div id="copyright">
+      <span >Designed by eBayo's</span>
+      <span>Corner</span>
+    </div>
+  </div>
 </body>
 </html>
